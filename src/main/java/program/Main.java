@@ -39,35 +39,110 @@ public class Main {
 
         //task 4
 
-        System.out.println("Введите колличество строк и нажмите <ENTER>");
-        int n = in.nextInt();
-           if(n==6){
-               int[] number = new int[n];
+//        System.out.println("Введите колличество строк и нажмите <ENTER>");
+//        int n = in.nextInt();
+//           if(n==6){
+//               int[] number = new int[n];
+//
+//               for( int i=0; i<n;i++){
+//                   System.out.println("Введите елемент числа ");
+//                   number[i]=in.nextInt();
+//               }
+//System.out.print("Полученое число ");
+//               for(int item:number){
+//                   System.out.print(item);
+//               }
+//               System.out.println(" ");
+//               int temp = number[0];
+//               number[0] = number[5];
+//               number[5] = temp;
+//               int temp1 = number[1];
+//               number[1] = number[4];
+//               number[4] = temp1;
+//               System.out.print("Отформатированое число ");
+//               for(int item:number){
+//           System.out.print(item);
+//       }
+//           }
+//           else
+//               System.out.println("Ошибка! Необходимо ввести цифру 6.");
+//            return;
 
-               for( int i=0; i<n;i++){
-                   System.out.println("Введите елемент числа ");
-                   number[i]=in.nextInt();
-               }
-System.out.print("Полученое число ");
-               for(int item:number){
-                   System.out.print(item);
-               }
-               System.out.println(" ");
-               int temp = number[0];
-               number[0] = number[5];
-               number[5] = temp;
-               int temp1 = number[1];
-               number[1] = number[4];
-               number[4] = temp1;
-               System.out.print("Отформатированое число ");
-               for(int item:number){
-           System.out.print(item);
-       }
-           }
-           else
-               System.out.println("Ошибка! Необходимо ввести цифру 6.");
-            return;
 
+        //task 5
+
+//        System.out.println("Введите номер месяца и нажмите <ENTER>");
+//        int month  = in.nextInt();
+//          switch (month) {
+//            case 12:
+//            case 1:
+//            case 2:
+//                System.out.print("Зима");
+//                break;
+//            case 3:
+//            case 4:
+//            case 5:
+//                System.out.print("Весна");
+//                break;
+//            case 6:
+//            case 7:
+//            case 8:
+//                System.out.print("Лето");
+//                break;
+//            case 9:
+//            case 10:
+//            case 11:
+//                System.out.print("Осень");
+//                break;
+//            default:
+//                System.out.print("Вы с какой планеты? Нет столько месяцев в году");
+//        }
+
+        //task 6
+//        System.out.println("Введите количество метров и нажмите <ENTER>");
+//        int m  = in.nextInt();
+//
+//        System.out.println("Если хотите метры перевесим в мили - выберите 1 и нажмите <ENTER>");
+//        System.out.println("Если хотите метры перевесим в дюймы - выберите 2 и нажмите <ENTER>");
+//        System.out.println("Если хотите метры перевесим в ярды - выберите 3 и нажмите <ENTER>");
+//        int n  = in.nextInt();
+//
+//          switch (n) {
+//              case 1:
+//                  double rez = m * 0.000621371;
+//                  System.out.print(rez);
+//                  break;
+//              case 2:
+//                  double rez1 = m * 39.3701;
+//                  System.out.print(rez1);
+//                  break;
+//              case 3:
+//                  double rez2 = m * 1.09361;
+//                  System.out.print(rez2);
+//                  break;
+//              default:
+//                  System.out.print("Нет такого варианта");
+//          }
+
+        //task 7
+
+//        System.out.println("Начало диапозона : ");
+//        int a  = in.nextInt();
+//        System.out.println("Конец диапазона : ");
+//        int b  = in.nextInt();
+//
+//        if(b-a>0){
+//            odd_numbers (a, b);
+//    }
+//        else{
+//            odd_numbers_optimized (a, b);}
+
+        //task 8
+        System.out.println("Начало диапозона : ");
+        int a  = in.nextInt();
+        System.out.println("Конец диапазона : ");
+        int b  = in.nextInt();
+        multiplication_table (a, b);
 
 
 
@@ -80,5 +155,26 @@ System.out.print("Полученое число ");
     private static  double percent (int n, int m){
         return (double) ((double)n/100*m);
     }
+
+    private static void odd_numbers (int a, int b){
+        for (int i = a; i <= b; i++){
+            if (i % 2 != 0){
+            System.out.println(i);}
+        }
+    }
+    private static void odd_numbers_optimized (int a, int b){
+        for (int i = b; i <= a; i++){
+            if (i % 2 != 0){
+                System.out.println(i);}
+        }
+    }
+    private static void multiplication_table (int a, int b){
+        for (int i = a; i <= b; i++)
+                System.out.println(i+"*1="+i+" "+ i+"*2="+i*2+" "+ i+"*3="+i*3+" "+ i+"*4="+i*4+" "
+                        + i+"*5="+i*5+" "+ i+"*6="+i*6+" "+ i+"*7="+i*7+" "+ i+"*8="+i*8+" "
+                        + i+"*9="+i*9+" "+ i+"*10="+i*10+" ");
+
+    }
+
 
 }
