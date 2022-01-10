@@ -138,12 +138,48 @@ public class Main {
 //            odd_numbers_optimized (a, b);}
 
         //task 8
-        System.out.println("Начало диапозона : ");
-        int a  = in.nextInt();
-        System.out.println("Конец диапазона : ");
-        int b  = in.nextInt();
-        multiplication_table (a, b);
+//        System.out.println("Начало диапозона : ");
+//        int a  = in.nextInt();
+//        System.out.println("Конец диапазона : ");
+//        int b  = in.nextInt();
+//        multiplication_table (a, b);
 
+        //task 9
+
+        int n;
+        System.out.println("Введіть розір масива:");
+        n = Integer.parseInt(in.next());
+        int[] arr = new int[n];
+        int max = arr[0];
+        int min = arr[0];
+        int countNul=0;
+        int countPlus=0;
+
+        for (int i = 0; i < n; i++)
+            arr[i] = getRandomNumber(-20, 20);
+        for (int item : arr) {
+            System.out.println(item + " ");
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if (max < arr[i]) { // сравниваем
+                max = arr[i]; // запоминаем значение
+            }
+            if (min > arr[i]) { // сравниваем
+                min = arr[i]; // запоминаем значение
+            }
+            if (arr[i]>0) {
+                countPlus++;
+            }
+            if (arr[i]==0) {
+                countNul++;
+            }
+
+        }
+        System.out.println("Максимальное число в масиве : "+max);
+        System.out.println("Минимальное число в масиве : "+min);
+        System.out.println("Количество отрицательных элементов в масиве : "+(arr.length-countPlus-countNul));
+        System.out.println("Количество положительных элементов в масиве : "+countPlus);
+        System.out.println("Количество нулей в масиве : "+countNul);
 
 
 
@@ -174,6 +210,9 @@ public class Main {
                         + i+"*5="+i*5+" "+ i+"*6="+i*6+" "+ i+"*7="+i*7+" "+ i+"*8="+i*8+" "
                         + i+"*9="+i*9+" "+ i+"*10="+i*10+" ");
 
+    }
+    private static int getRandomNumber(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
     }
 
 
