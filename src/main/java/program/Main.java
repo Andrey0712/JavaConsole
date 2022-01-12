@@ -1,6 +1,7 @@
 package program;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 
@@ -184,113 +185,152 @@ public class Main {
 
         //task 10
 
+//        int n;
+//        System.out.println("Введіть розір масива:");
+//        n = Integer.parseInt(in.next());
+//        int[] arr = new int[n];
+//        int max = arr[0];
+//        int min = arr[0];
+//        int countMinus=0;
+//        int countPlus=0;
+//        int count_even_numb=0;
+//        int count_odd_numb=0;
+//
+//        for (int i = 0; i < n; i++)
+//            arr[i] = getRandomNumber(-20, 20);
+//        for (int item : arr) {
+//            System.out.println(item + " ");
+//        }
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i]>0) {
+//                countPlus++;
+//            }
+//            if (arr[i]<0) {
+//                countMinus++;
+//            }
+//            if (arr[i] % 2 != 0){
+//                count_odd_numb++;
+//            }
+//            if (arr[i] % 2 == 0){
+//                count_even_numb++;
+//            }
+//
+//        }
+//        if(countPlus==0){
+//            System.out.println("Масив позитивных чисел не создан");
+//        }
+//        else{
+//            int[] plus=new int[countPlus]; // выделение памяти
+//            int j=0; // индекс в новом массиве
+//            for(int i=0;i<arr.length;i++){
+//                if (arr[i]>0)
+//                plus[j++]=arr[i];
+//            }
+//            Arrays.sort(plus);
+//            // печать сформированного массива
+//            // цикл for each
+//            System.out.println("Масив позитивных чисел: ");
+//            for(int x:plus){
+//                System.out.print(x+" ");
+//            }
+//            System.out.println();
+//        }
+//        if(count_odd_numb==0){
+//            System.out.println("Масив нечетных чисел не создан");
+//        }
+//        else{
+//            int[] odd_numb=new int[count_odd_numb]; // выделение памяти
+//            int j=0; // индекс в новом массиве
+//            for(int i=0;i<arr.length;i++){
+//                if (arr[i] % 2 != 0)
+//                    odd_numb[j++]=arr[i];
+//            }
+//            Arrays.sort(odd_numb);
+//             System.out.println("Масив нечетных чисел: ");
+//            for(int x:odd_numb){
+//                System.out.print(x+" ");
+//            }
+//            System.out.println();
+//        }
+//        if(count_even_numb==0){
+//            System.out.println("Масив четных чисел не создан");
+//        }
+//        else{
+//            int[] even_numb=new int[count_even_numb]; // выделение памяти
+//            int j=0; // индекс в новом массиве
+//            for(int i=0;i<arr.length;i++){
+//                if (arr[i] % 2 == 0)
+//                    even_numb[j++]=arr[i];
+//            }
+//            Arrays.sort(even_numb);
+//            System.out.println("Масив четных чисел: ");
+//            for(int x:even_numb){
+//                System.out.print(x+" ");
+//            }
+//            System.out.println();
+//        }
+//        if(countMinus==0){
+//            System.out.println("Масив негативных чисел не создан");
+//        }
+//        else{
+//            int[] minus=new int[countMinus]; // выделение памяти
+//            int j=0; // индекс в новом массиве
+//            for(int i=0;i<arr.length;i++){
+//                if (arr[i]<0)
+//                    minus[j++]=arr[i];
+//            }
+//            Arrays.sort(minus);
+//            System.out.println("Масив негативных чисел: ");
+//            for(int x:minus){
+//                System.out.print(x+" ");
+//            }
+//            System.out.println();
+//        }
+
+        //task 12
+
         int n;
         System.out.println("Введіть розір масива:");
         n = Integer.parseInt(in.next());
-        int[] arr = new int[n];
-        int max = arr[0];
-        int min = arr[0];
-        int countMinus=0;
-        int countPlus=0;
-        int count_even_numb=0;
-        int count_odd_numb=0;
-
+        Integer [] arr = new Integer[n];
         for (int i = 0; i < n; i++)
             arr[i] = getRandomNumber(-20, 20);
         for (int item : arr) {
-            System.out.println(item + " ");
+            System.out.print(item + " ");
         }
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i]>0) {
-                countPlus++;
-            }
-            if (arr[i]<0) {
-                countMinus++;
-            }
-            if (arr[i] % 2 != 0){
-                count_odd_numb++;
-            }
-            if (arr[i] % 2 == 0){
-                count_even_numb++;
-            }
-
-        }
-        if(countPlus==0){
-            System.out.println("Масив позитивных чисел не создан");
-        }
-        else{
-            int[] plus=new int[countPlus]; // выделение памяти
-            int j=0; // индекс в новом массиве
-            for(int i=0;i<arr.length;i++){
-                if (arr[i]>0)
-                plus[j++]=arr[i];
-            }
-            Arrays.sort(plus);
-            // печать сформированного массива
-            // цикл for each
-            System.out.println("Масив позитивных чисел: ");
-            for(int x:plus){
-                System.out.print(x+" ");
-            }
-            System.out.println();
-        }
-        if(count_odd_numb==0){
-            System.out.println("Масив нечетных чисел не создан");
-        }
-        else{
-            int[] odd_numb=new int[count_odd_numb]; // выделение памяти
-            int j=0; // индекс в новом массиве
-            for(int i=0;i<arr.length;i++){
-                if (arr[i] % 2 != 0)
-                    odd_numb[j++]=arr[i];
-            }
-            Arrays.sort(odd_numb);
-             System.out.println("Масив нечетных чисел: ");
-            for(int x:odd_numb){
-                System.out.print(x+" ");
-            }
-            System.out.println();
-        }
-        if(count_even_numb==0){
-            System.out.println("Масив четных чисел не создан");
-        }
-        else{
-            int[] even_numb=new int[count_even_numb]; // выделение памяти
-            int j=0; // индекс в новом массиве
-            for(int i=0;i<arr.length;i++){
-                if (arr[i] % 2 == 0)
-                    even_numb[j++]=arr[i];
-            }
-            Arrays.sort(even_numb);
-            System.out.println("Масив четных чисел: ");
-            for(int x:even_numb){
-                System.out.print(x+" ");
-            }
-            System.out.println();
-        }
-        if(countMinus==0){
-            System.out.println("Масив негативных чисел не создан");
-        }
-        else{
-            int[] minus=new int[countMinus]; // выделение памяти
-            int j=0; // индекс в новом массиве
-            for(int i=0;i<arr.length;i++){
-                if (arr[i]<0)
-                    minus[j++]=arr[i];
-            }
-            Arrays.sort(minus);
-            System.out.println("Масив негативных чисел: ");
-            for(int x:minus){
-                System.out.print(x+" ");
-            }
-            System.out.println();
-        }
+        System.out.println("Для сортировки по возростанию нажмите 1, по спаданию 2 и нажмите <ENTER>");
+        int m  = in.nextInt();
+        sort(arr,m);
 
 
 
 
 
 
+    }
+
+    private static void sort(Integer [] arr,int m){
+
+
+        switch (m) {
+            case 1:
+                Arrays.sort(arr);
+                System.out.println("Масив отсортирован по возростанию чисел: ");
+                for(int x:arr){
+                    System.out.print(x+" ");
+                }
+                break;
+            case 2:
+                Arrays.sort(arr, Collections.reverseOrder());
+                System.out.println("Масив отсортирован по спаданию чисел: ");
+                for(int x:arr){
+                    System.out.print(x+" ");
+                }
+                break;
+
+            default:
+                System.out.print("Нет такого варианта");
+        }
     }
 
     private static  double percent (int n, int m){
