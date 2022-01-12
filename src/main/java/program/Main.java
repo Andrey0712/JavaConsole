@@ -287,30 +287,57 @@ public class Main {
 //            System.out.println();
 //        }
 
+//task 11
+
+//        System.out.println("Введите длину линии:");
+//        int n = Integer.parseInt(in.next());
+//        System.out.println("Введите символ");
+//        String m=in.next();
+//        System.out.println("Введите направление линии (1-горизонталь, 2- вертикаль) :");
+//        int route=in.nextInt();
+//
+//        line(n,route,m);
+
         //task 12
 
-        int n;
-        System.out.println("Введіть розір масива:");
-        n = Integer.parseInt(in.next());
-        Integer [] arr = new Integer[n];
-        for (int i = 0; i < n; i++)
-            arr[i] = getRandomNumber(-20, 20);
-        for (int item : arr) {
-            System.out.print(item + " ");
-        }
-        System.out.println("Для сортировки по возростанию нажмите 1, по спаданию 2 и нажмите <ENTER>");
-        int m  = in.nextInt();
-        sort(arr,m);
-
-
-
+//        int n;
+//        System.out.println("Введіть розір масива:");
+//        n = Integer.parseInt(in.next());
+//        Integer [] arr = new Integer[n];
+//        for (int i = 0; i < n; i++)
+//            arr[i] = getRandomNumber(-20, 20);
+//        for (int item : arr) {
+//            System.out.print(item + " ");
+//        }
+//        System.out.println("Для сортировки по возростанию нажмите 1, по спаданию 2 и нажмите <ENTER>");
+//        int m  = in.nextInt();
+//        sort(arr,m);
 
 
 
     }
+    private static void line(int n,int route,String m){
+        String[] arr = new String[n];
+        for (int i = 0; i < n; i++)
+            arr[i] = m;
+        switch (route) {
+            case 1:
+                for (String item : arr) {
+                    System.out.print(item + " ");
+                }
+                break;
+            case 2:
+                for (String item : arr) {
+                    System.out.println(item + " ");
+                }
+                break;
+
+            default:
+                System.out.print("Нет такого варианта");
+        }
+    }
 
     private static void sort(Integer [] arr,int m){
-
 
         switch (m) {
             case 1:
